@@ -635,8 +635,7 @@
 			},
 			"properties": {},
 			"functions": {
-				"onMouseDown": "function (data)\n{\n\tthis.getBehavior().addMouseJoint();\n\tthis.hasMouseJoint = true;\n\twade.playAudio(\"sms.ogg\");\n}",
-				"onAddToScene": "function (data)\n{\n\twade.playAudio(\"Stitches.ogg\");\n}",
+				"onMouseDown": "function (data)\n{\n\tthis.getBehavior().addMouseJoint();\n\tthis.hasMouseJoint = true;\n\twade.playAudio(\"whoosh.mp3\");\n}",
 				"onMouseMove": "function (data)\n{\n\t\n}"
 			}
 		},
