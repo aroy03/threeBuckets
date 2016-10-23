@@ -11,51 +11,30 @@ App = function()
         });
 		
 	// create a red square
-//         var sprite = new Sprite();
-//         sprite.setSize(100, 100);
-//         sprite.setDrawFunction(wade.drawFunctions.solidFill_('red'));
-//         this.square = new SceneObject(sprite);
-//         wade.addSceneObject(this.square);
+        var sprite = new Sprite();
+        sprite.setSize(100, 100);
+        sprite.setDrawFunction(wade.drawFunctions.solidFill_('red'));
+        this.square = new SceneObject(sprite);
+        wade.addSceneObject(this.square);
  
 
-// 	    this.onDeviceOrientation = function(eventData)
-// 	    {
-// 		// calculate new position
-// 		var pos = this.square.getPosition();
-// 		pos.x += eventData.beta;
-// 		pos.y -= eventData.gamma;
-
-// 		// restrict new position to the screen
-// 		var w = wade.getScreenWidth()  / 2 - 50;
-// 		var h = wade.getScreenHeight() / 2 - 50;
-// 		pos.x = Math.min(Math.max(pos.x, -w), w);
-// 		pos.y = Math.min(Math.max(pos.y, -h), h);
-
-// 		// update the position of the square
-// 		this.square.setPosition(pos.x, pos.y);
-// 	    };
-		
-		// create a red square
-
-            var objRedBall = wade.getSceneObject("redBall");
-
-	    objRedBall.onDeviceOrientation = function(eventData)
+	    this.onDeviceOrientation = function(eventData)
 	    {
-		    alert("in Device Orient");
 		// calculate new position
-// 		var pos = objRedBall.getPosition();
-// 		pos.x += eventData.beta;
-// 		pos.y -= eventData.gamma;
+		var pos = this.square.getPosition();
+		pos.x += eventData.beta;
+		pos.y -= eventData.gamma;
 
 		// restrict new position to the screen
-// 		var w = wade.getScreenWidth()  / 2 - 50;
-// 		var h = wade.getScreenHeight() / 2 - 50;
-// 		pos.x = Math.min(Math.max(pos.x, -w), w);
-// 		pos.y = Math.min(Math.max(pos.y, -h), h);
+		var w = wade.getScreenWidth()  / 2 - 50;
+		var h = wade.getScreenHeight() / 2 - 50;
+		pos.x = Math.min(Math.max(pos.x, -w), w);
+		pos.y = Math.min(Math.max(pos.y, -h), h);
 
 		// update the position of the square
-// 		objRedBall.setPosition(pos.x, pos.y);
+		this.square.setPosition(pos.x, pos.y);
 	    };
+		
         
         wade.app.onMouseUp = function()
         {
